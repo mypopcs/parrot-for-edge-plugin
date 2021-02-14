@@ -1,0 +1,32 @@
+{
+    "appName": {
+        "message": "Parrot",
+        "description": "应用的标题"
+    },
+    "appDesc": {
+        "message": "英语学习工具",
+        "description": "应用的描述, 显示在应用商城."
+    },
+    "defaultTitle": {
+        "message": "Parrot-好好学习英语",
+        "description": "鼠标悬停在图标上时显示的tips"
+    },
+    "search": {
+        "message": "搜索"
+    },
+    "sysSetting": {
+        "message": "系统设置"
+    },
+    "docSetting": {
+        "message": "词典设置"
+    },
+    "SysSettingText": {
+        "message": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+    },
+    "vesionTitle": {
+        "message": "当前版本："
+    },
+    "versionNewest": {
+        "message": "已经是最新版本"
+    }
+}

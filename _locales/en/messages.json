@@ -1,0 +1,23 @@
+{
+    "appName":  {
+        "message": "Parrot"
+    },
+    "appDesc": {
+        "message": "English words learn tools"
+    },
+    "defaultTitle": {
+        "message": "Parrot-good good study"
+    },
+    "search": {
+        "message": "Search"
+    },
+    "sysSetting": {
+        "message": "System setting"
+    },
+    "docSetting": {
+        "message": "Dictionary setting"
+    },
+    "SysSettingText": {
+        "message": "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid."
+    }
+}

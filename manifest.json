@@ -1,9 +1,10 @@
 {
     "manifest_version": 2,
-    "name": "Parrot",
+    "name": "__MSG_appName__",
     "version": "0.0.1",
-    "description": "English words learn tools",
+    "description": "__MSG_appDesc__",
     "homepage_url": "https://www.parrot.com",
+    "default_locale": "en",
     "icons": {
         "16": "public/img/icon16.png",
 		"48": "public/img/icon48.png",
@@ -11,7 +12,7 @@
     },
     "browser_action": {
         "default_icon": "public/img/icon128.png",
-		"default_title": "Parrot-good good study",
+		"default_title": "__MSG_defaultTitle__",
 		"default_popup": "src/popup.html"
     },
     "permissions": [
