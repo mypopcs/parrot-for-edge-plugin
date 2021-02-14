@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "Parrot",
+    "version": "0.0.1",
+    "description": "English words learn tools",
+    "homepage_url": "https://www.parrot.com",
+    "icons": {
+        "16": "public/img/icon16.png",
+		"48": "public/img/icon48.png",
+		"128": "public/img/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "public/img/icon128.png",
+		"default_title": "Parrot-good good study",
+		"default_popup": "src/popup.html"
+    },
+    "permissions": [
+        "contextMenus",
+		"tabs",
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+    ],
+    "options_page": "options.html",
+    "options_ui":
+	{
+		"page": "options.html",
+		"chrome_style": true
+    },
+    "content_security_policy": "script-src 'self' blob: filesystem:"
+}
