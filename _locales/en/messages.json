@@ -11,6 +11,9 @@
     "search": {
         "message": "Search"
     },
+    "setting": {
+        "message": "Setting"
+    },
     "sysSetting": {
         "message": "System setting"
     },
