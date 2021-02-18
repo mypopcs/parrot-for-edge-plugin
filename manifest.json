@@ -3,6 +3,7 @@
     "name": "__MSG_appName__",
     "version": "0.0.1",
     "description": "__MSG_appDesc__",
+    "author": "kim@woiio.com",
     "homepage_url": "https://www.parrot.com",
     "default_locale": "en",
     "icons": {
@@ -15,6 +16,12 @@
 		"default_title": "__MSG_defaultTitle__",
 		"default_popup": "src/popup.html"
     },
+    "background":
+	{
+		"scripts": [
+            "public/js/background.js"
+        ]
+    },
     "permissions": [
         "contextMenus",
 		"tabs",
@@ -25,11 +32,35 @@
 		"http://*/*",
 		"https://*/*"
     ],
+    "web_accessible_resources": [
+      "public/js/index.js",
+      "data/wordsList.json"
+    ],
+    "optional_permissions": [
+        "https://*/*"
+    ],
     "options_page": "options.html",
     "options_ui":
 	{
 		"page": "options.html",
 		"chrome_style": true
     },
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "css": [
+            "public/css/content_script.css"
+          ],
+          "js": [
+            "public/js/content_script.js",
+            "public/js/content/words.js",
+            "public/js/content/bubble.js",
+            "public/js/content/highlight.js"
+          ],
+          "run_at": "document_start"
+        }
+    ],
     "content_security_policy": "script-src 'self' blob: filesystem:"
 }
