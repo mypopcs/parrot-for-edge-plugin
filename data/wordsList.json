@@ -1,0 +1,37 @@
+{
+    "defaultGroup": {
+        "name": "默认分组",
+        "groupLevel": 0,
+        "coverPic": "../img/icon128",
+        "wordsList": [
+            {
+                "simplest": {
+                    "zh": "最简单的",
+                    "level": 3,
+                    "count": 1
+                }
+            },
+            {
+                "flowchart": {
+                    "zh": "流程图",
+                    "level": 3,
+                    "count": 1
+                }
+            },
+            {
+                "settings": {
+                    "zh": "设置",
+                    "level": 1,
+                    "count": 1
+                }
+            },
+            {
+                "google": {
+                    "zh": "谷歌",
+                    "level": 1,
+                    "count": 1
+                }
+            }
+        ]
+    }
+}

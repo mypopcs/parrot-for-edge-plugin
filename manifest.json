@@ -23,14 +23,14 @@
         ]
     },
     "permissions": [
-        "contextMenus",
-		"tabs",
-		"notifications",
-		"webRequest",
-		"webRequestBlocking",
-		"storage",
-		"http://*/*",
-		"https://*/*"
+      "contextMenus",
+      "tabs",
+      "notifications",
+      "webRequest",
+      "webRequestBlocking",
+      "storage",
+      "http://*/*",
+      "https://*/*"
     ],
     "web_accessible_resources": [
       "public/js/index.js",
@@ -51,7 +51,7 @@
             "<all_urls>"
           ],
           "css": [
-            "public/css/content_script.css"
+            "public/css/highlight.css"
           ],
           "js": [
             "public/js/content_script.js",
