@@ -8,6 +8,8 @@ var ptHighlight = {
     //高亮单词单个字母标签与CSS类前缀
     highlightWordsTag: 'span',
     highlightWordsClass: 'parrotWords',
+    //用于向DOM中高亮单词后id计数
+    cur_pt_node_id: 1,
     /*--------初始化正则----------*/
     initRegex: function(keyWord){
         // 针对特殊字符的转义，$1，$2表达的是小括号里面的内容

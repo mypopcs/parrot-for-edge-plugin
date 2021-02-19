@@ -10,10 +10,11 @@ var ptWords = {
         for(var key in data){
             //获取JSON文件中所有英语单词列表
             //wordsList是数据中某个分组下面的所有单词与信息的集合数组
-            var allWords = data[key].wordsList
-            for(w=0; w < allWords.length; w++){
+            var allWordsInfo = data[key].wordsList
+            // console.log(allWords)
+            for(w=0; w < allWordsInfo.length; w++){
                 //遍历单词对象，获取所有的英语单词
-                for(var key in allWords[w]){
+                for(var key in allWordsInfo[w]){
                     //push() 方法可向数组的末尾添加一个或多个元素，并返回新的长度。
                     enWords.push(key)
                 }
@@ -23,8 +24,8 @@ var ptWords = {
         local_storage = chrome.storage.local;
         //存储所有单词
         local_storage.set({"match_words": enWords});
-        //存储所有单词对象
-        local_storage.set({"allWordsObj": allWords})
+        //存储所有单词对象，包括单个单词的所有信息
+        local_storage.set({"allWordsInfo": allWordsInfo})
     },
     /*-----------配置英语单词获取功能，并执行获取-----------*/
     load_eng_words: function(){

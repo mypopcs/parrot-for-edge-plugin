@@ -55,9 +55,11 @@
           ],
           "js": [
             "public/js/content_script.js",
+            "public/js/public_lib.js",
             "public/js/content/words.js",
-            "public/js/content/bubble.js",
-            "public/js/content/highlight.js"
+            "public/js/content/highlight.js",
+            "public/js/bubble/tooltips.js",
+            "public/js/bubble/bubble.js"
           ],
           "run_at": "document_start"
         }
