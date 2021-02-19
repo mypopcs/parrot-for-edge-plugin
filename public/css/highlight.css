@@ -1,6 +1,7 @@
 /* 单词 */
 .pt-highlight{
     position:relative;
+    z-index: 10; /*解决某些地方父级引用背景导致hover效果失效*/
     color:#fe628e;
     font-weight: 900;
     cursor: pointer;

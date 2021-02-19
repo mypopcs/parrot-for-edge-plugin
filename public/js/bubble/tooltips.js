@@ -164,10 +164,12 @@ var ptTooltips = {
         } else {
             if(tooltip.style.opacity == 0){
                 tooltip.style.opacity = 1;
+                tooltip.style.display = 'inline-block'; //隐藏后不占用位置，防止遮住下方
                 boxCurrentPos = getBoxCurrentPositions(element, tooltip);
                 setBoxPosition(tooltip, boxCurrentPos.boxTop, boxCurrentPos.boxLeft)
             } else if(tooltip.style.opacity == 1){
                 tooltip.style.opacity = 0;
+                tooltip.style.display = 'none';
             } else {
                 if(element !== tooltip.targetEle){
                     setContent(tooltip, content);
@@ -176,6 +178,7 @@ var ptTooltips = {
                 }
                 else{
                     tooltip.style.opacity = 0;
+                    tooltip.style.display = 'none';
                 }
             }
         }

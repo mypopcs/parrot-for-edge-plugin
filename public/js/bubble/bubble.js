@@ -29,6 +29,7 @@ var ptBubble = {
         }
         //初始化默认隐藏
         bubbleDom[0].style.opacity = '0'
+        bubbleDom[0].style.display = 'none'
         
         //bubble的结构构造
         //tips容器中添加单词容器和例子容器
