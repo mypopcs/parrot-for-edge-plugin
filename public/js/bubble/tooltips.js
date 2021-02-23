@@ -183,17 +183,53 @@ var ptTooltips = {
             }
         }
     },
+    getObjChild: function(txt, val){
+        /*--------获取本地存储的单词数据----------*/
+        chrome.storage.local.get(['allWordsInfo'], function(result){
+            var wordData = result.allWordsInfo;
+            for( w=0; w < wordData.length; w++){
+                //获取对象的对象名
+                var keys = Object.keys(wordData[w]).toString()
+                //判断对象名和鼠标悬停单词是否一致
+                if(keys === txt){
+                    //只有一致才获取内部内容
+                    var WordZhEle = document.getElementById('pt_bubbleZhWrap')
+                    var BeforeTxtEle = document.createTextNode(keys)
+                    WordZhEle.appendChild(BeforeTxtEle)
+                    switch(val){
+                        case 0: //获取中文翻译
+                            var WordZh = Object.values(wordData[w])[0].zh
+                            var WordZhEle = document.getElementById('pt_bubbleSubTitle')
+                            // console.log(WordZhEle)
+                            var AfterTxtEle = document.createTextNode(WordZh)
+                            WordZhEle.appendChild(AfterTxtEle)
+                            break;
+                        case 1: //获得等级
+                            console.log(Object.values(wordData[w])[0].level)
+                            break;
+                        case 2: //获得出现次数
+                            console.log(Object.values(wordData[w])[0].count)
+                            break;
+                    }
+                }
+            }
+        });
+    },
     /*-----------box显示-----------*/
     hoverShow: function(){
-        console.log('显示了')
+        // console.log('显示了')
         var element = element || window.event, element = element.target || element.srcElement;
+        //获取到鼠标悬停的单词内容
+        var hoverTxt = element.innerHTML
+        //调用获取数据
+        ptTooltips.getObjChild(hoverTxt, 0)
         //设置tooltip位置
         ptTooltips.setBox(element)
         return
     },
     /*-----------box隐藏-----------*/
     hoverHide: function(){
-        console.log('隐藏了')
+        // console.log('隐藏了')
         ptTooltips.setBox()
         return
     },
@@ -213,7 +249,7 @@ var ptTooltips = {
             * fn回调函数，useCaption用于描述是冒泡还是捕获。默认值是false，即冒泡传递。 当值为true，就是捕获传递
             */
             elementArray[i].addEventListener('mouseenter', this.hoverShow, false)
-            elementArray[i].addEventListener('mouseout', this.hoverHide, false)
+            // elementArray[i].addEventListener('mouseout', this.hoverHide, false)
         }
     },
     /*-----------总调用入口-----------*/

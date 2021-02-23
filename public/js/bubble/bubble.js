@@ -10,8 +10,6 @@ var bubbleDom = [
     'bubbleSubTitle', //二级标题
     'bubbleExampleLine' //单个例句
 ]
-/*--------调用获取单词数据----------*/
-var allWordsInfo = ptPublicLib.getWordData
 var ptBubble = {
     // var pt_online_dicts = null;
     // var node_get_hover_id = null;
@@ -46,27 +44,5 @@ var ptBubble = {
         bubbleDom[2].appendChild(bubbleDom[9])
         return bubbleDom[0]
     },
-    /*--------往tips框架中加入数据----------*/
-    bubbleData: function(ele){
-        //textContent 属性设置或者返回指定节点的文本内容。
-        //获取鼠标hover的文本
-        var hoverWord = ele.textContent
-        for(var key in allWordsInfo){
-            var worldGroup = Object.keys(allWordsInfo[key])
-            //获取key值
-            // console.log(allWordsInfo[key])
-            if(worldGroup[0] == hoverWord){
-                var enWord = worldGroup
-                // console.log(enWord)
-            }
-            // for(var key in worldGrop){
-            //     if(key == hoverWord){
-            //         console.log(worldGrop[key])
-            //     }
-            // }
-            // if(allWords[i].key == hoverWord){
-            //     console.log('666')
-            // }
-        }
-    }
+    
 }
